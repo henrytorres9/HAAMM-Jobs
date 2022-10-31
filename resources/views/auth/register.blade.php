@@ -23,6 +23,17 @@
         <x-input-error :messages="$errors->get('email')" class="mt-2" />
       </div>
 
+      <!-- Rol de usuario -->
+      <div class="mt-4">
+        <x-input-label for="rol" :value="__('¿Qué tipo de cuenta deseas en HAAMM Jobs?')" />
+        <select name="rol" id="rol" class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full">
+          <option value="">-- Selecciona un rol --</option>
+          <option value="1">Developer - Obtener Empleo</option>
+          <option value="2">Reclutador - Publicar Empleos</option>
+        </select>
+        <x-input-error :messages="$errors->get('rol')" class="mt-2" />
+      </div>
+
       <!-- Password -->
       <div class="mt-4">
         <x-input-label for="password" :value="__('Password')" />
@@ -32,7 +43,7 @@
 
       <!-- Confirm Password -->
       <div class="mt-4">
-        <x-input-label for="password_confirmation" :value="__('Confirmar Password')" />
+        <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
         <x-text-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required />
         <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
       </div>
