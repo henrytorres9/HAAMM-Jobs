@@ -71,7 +71,7 @@
     <div class="my-5 w-80">
       @if ($imagen)
         Vista previa de la imagen:
-        <img src="{{ $imagen->temporaryUrl() }}" alt="{{Imagen con datos de la vacante.}}">
+        <img src="{{ $imagen->temporaryUrl() }}" alt="Imagen con datos de la vacante.">
       @endif
     </div>
 
