@@ -81,7 +81,7 @@
   </div>
 
   <!-- Botón crear vacante -->
-  <x-primary-button>
+  <x-primary-button class="my-5">
     {{ __('Crear vacante') }}
   </x-primary-button>
 </form>
