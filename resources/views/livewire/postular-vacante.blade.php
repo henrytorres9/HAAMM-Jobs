@@ -5,16 +5,16 @@
       {{ session('mensaje') }}
     </p>
   @else
-    <form wire:submit.prevent='postularme' class="w-96 mt-5">
+    <form wire:submit.prevent='postularme' class="w-96 mt-5 flex flex-col justify-center items-center">
       <div class="mb-4">
         <x-input-label for="cv" :value="__('Anexa tu Currículum si deseas postularte')" />
         <x-text-input id="cv" class="block mt-1 w-full" type="file" wire:model="cv" accept=".pdf"/>
       </div>
-  
+
       @error('cv')
         <livewire:mostrar-alerta :message="$message" />
       @enderror
-  
+      
       <!-- Botón postular vacante -->
       <x-primary-button class="my-5">
         {{ __('Postularme a la vacante') }}
