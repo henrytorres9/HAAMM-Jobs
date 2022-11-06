@@ -1,0 +1,2 @@
+- Se corrió el comando para producción: npm run build
+- Se eliminó: /public/build
