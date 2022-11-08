@@ -28,7 +28,7 @@ return [
     |
     */
 
-  'env' => env('APP_ENV', 'local'),
+  'env' => env('APP_ENV', 'production'),
 
   /*
     |--------------------------------------------------------------------------
@@ -195,6 +195,9 @@ return [
     App\Providers\EventServiceProvider::class,
     App\Providers\RouteServiceProvider::class,
 
+    // Manejo de imágenes
+    Intervention\Image\ImageServiceProvider::class
+
   ],
 
   /*
@@ -210,6 +213,7 @@ return [
 
   'aliases' => Facade::defaultAliases()->merge([
     // 'ExampleClass' => App\Example\ExampleClass::class,
+    'Image' => Intervention\Image\Facades\Image::class
   ])->toArray(),
 
 ];
